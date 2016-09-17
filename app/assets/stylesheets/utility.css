@@ -1,0 +1,260 @@
+/* ==================================================
+   Layout Utilities
+================================================== */
+.no-mt {
+  margin-top: 0!important;
+}
+.no-mb {
+  margin-bottom: 0!important;
+}
+.no-pb {
+  padding-bottom: 0!important;
+}
+.no-pt {
+  padding-top: 0!important;
+}
+.no-pl {
+  padding-left: 0!important;
+}
+.no-pr {
+  padding-right: 0!important;
+}
+.no-padding {
+  padding: 0!important;
+}
+.no-margin {
+  margin: 0!important;
+}
+.mr {
+  margin-right: 30px;
+}
+.ml {
+  margin-left: 30px;
+}
+.mr-small {
+  margin-right: 15px;
+}
+.ml-small {
+  margin-left: 15px;
+}
+.mr-xsmall {
+  margin-right: 7.5px;
+}
+.ml-xsmall {
+  margin-left: 7.5px;
+}
+.pr {
+  padding-right: 30px;
+}
+.pl {
+  padding-left: 30px;
+}
+.pr-small {
+  padding-right: 15px;
+}
+.pl-small {
+  padding-left: 15px;
+}
+.pr-xsmall {
+  padding-right: 7.5px;
+}
+.pl-xsmall {
+  padding-left: 7.5px;
+}
+/*  margin */
+.mb-large {
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .mb-large {
+    margin-bottom: 120px;
+  }
+}
+.mb-medium {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .mb-medium {
+    margin-bottom: 60px;
+  }
+}
+.mb-small {
+  margin-bottom: 15px;
+}
+.mb {
+  margin-bottom: 30px;
+}
+.mt-large {
+  margin-top: 60px;
+}
+@media (min-width: 768px) {
+  .mt-large {
+    margin-top: 120px;
+  }
+}
+.mt-medium {
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  .mt-medium {
+    margin-top: 60px;
+  }
+}
+.mt-small {
+  margin-top: 15px;
+}
+.mt {
+  margin-top: 30px;
+}
+/*  margin negative */
+@media (min-width: 1200px) {
+  .mt-negative-x-large {
+    margin-top: -120px;
+  }
+  .mt-negative-large {
+    margin-top: -90px;
+  }
+  .mt-negative-medium {
+    margin-top: -60px;
+  }
+  .mt-negative-small {
+    margin-top: -15px;
+  }
+  .mt-negative {
+    margin-top: -30px;
+  }
+}
+/*  padding */
+.pb-large {
+  padding-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .pb-large {
+    padding-bottom: 120px;
+  }
+}
+.pb-medium {
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .pb-medium {
+    padding-bottom: 60px;
+  }
+}
+.pb-small {
+  padding-bottom: 15px;
+}
+.pb {
+  padding-bottom: 30px;
+}
+.pt-large {
+  padding-top: 60px;
+}
+@media (min-width: 768px) {
+  .pt-large {
+    padding-top: 120px;
+  }
+}
+.pt-medium {
+  padding-top: 30px;
+}
+@media (min-width: 768px) {
+  .pt-medium {
+    padding-top: 60px;
+  }
+}
+.pt-small {
+  padding-top: 15px;
+}
+.pt {
+  padding-top: 30px;
+}
+/** add a margin bottom or top, only on mobile **/
+@media (max-width: 767px) {
+  .mb-xs {
+    margin-bottom: 30px;
+  }
+  .mt-xs {
+    margin-top: 30px;
+  }
+}
+/** add a margin bottom, on mobile and small devices **/
+@media (max-width: 991px) {
+  .mb-sm {
+    margin-bottom: 30px;
+  }
+  .mt-sm {
+    margin-top: 30px;
+  }
+}
+
+/* ==================================================
+   Margin Bottom Sets
+================================================== */
+
+.margin-0{
+	margin-bottom:0 !important;
+}
+
+.margin-10{
+	margin-bottom:10px !important;
+}
+
+.margin-15{
+	margin-bottom:15px !important;
+}
+
+.margin-20{
+	margin-bottom:20px !important;
+}
+
+.margin-30{
+	margin-bottom:30px !important;
+}
+
+.margin-40{
+	margin-bottom:40px !important;
+}
+
+.margin-50{
+	margin-bottom:50px !important;
+}
+
+.margin-60{
+	margin-bottom:60px !important;
+}
+
+.margin-70{
+	margin-bottom:70px !important;
+}
+
+.margin-80{
+	margin-bottom:80px !important;
+}
+
+
+/* ==================================================
+   Alignment
+================================================== */
+
+.align_left{
+	float:left;
+	margin:0 25px 0 0px!important;
+}
+
+.align_right{
+	float:right;
+	margin:0 0 0 25px!important;
+}
+
+.text_align_left {
+	text-align: left;
+}
+
+.text_align_center {
+	text-align: center;
+}
+
+.text_align_right {
+	text-align: right;	
+}
