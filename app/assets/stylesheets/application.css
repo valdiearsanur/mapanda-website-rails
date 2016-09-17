@@ -13,6 +13,8 @@
  *= require bootstrap/dist/css/bootstrap
  * require supersized/slideshow/css/supersized
  *= require fancybox/source/jquery.fancybox
+
+
  *= require_tree .
  *= require_self
  
