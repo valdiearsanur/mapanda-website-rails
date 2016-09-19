@@ -1,2 +1,2 @@
-class AdminLogin < ActiveRecord::Base
+class Admin::AdminLogin < ActiveRecord::Base
 end

@@ -54,3 +54,5 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'ruby-debug-ide', '0.6.0'
