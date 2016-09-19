@@ -4,6 +4,10 @@ class AdminController < ApplicationController
   protect_from_forgery with: :exception
 
   def login
+    user = AdminLogin.new do |u|
+      u.name = "David"
+      u.occupation = "Code Artist"
+    end
   end
 
   def index

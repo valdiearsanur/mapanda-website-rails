@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :games
+  end
+  resources :games
+  namespace :admin do
+    resources :games, :comments
+    get 'site/index'
+    root 'site#login'
+  end
+
+
+
+  get 'site/index'
+  get 'site/botiafriends'
+  get 'site/whenaliensolvemath'
+  get 'site/cleanadventure'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
