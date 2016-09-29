@@ -2,8 +2,12 @@ source 'https://rubygems.org'
 
 gem 'bower'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
+
+gem "wysiwyg-rails"
+
 # Use postgresql for development and test server (not sqlite3)
 gem 'pg'
 # Use SCSS for stylesheets

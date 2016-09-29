@@ -1,6 +1,13 @@
-<p id="notice"><%= notice %></p>
+<% content_for :headnav do %>
+  <a class="navbar-brand" href="#">Post</a>
+<% end %>
 
 
+<% if !notice.nil? %>
+  <div class="alert alert-info">
+      <span><%= notice %></span>
+  </div>
+<% end %>
 
 <div class="row">
 
@@ -23,39 +30,21 @@
                     <th>Action</th>
                   </tr></thead>
                   <tbody>
-                    <tr>
-                      <td>0</td>
-                      <td>Sample Post</td>
-                      <td>A Description</td>
-                      <td>
-                        <%= link_to new_admin_post_path, {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
-                          <i class="fa fa-edit"></i>
-                        <% end %>
-
-                        <%= link_to new_admin_post_path, {:title => 'Edit', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
-                          <i class="fa fa-edit"></i>
-                        <% end %>
-
-                        <%= link_to new_admin_post_path, {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
-                          <i class="fa fa-times"></i>
-                        <% end %>
-                      </td>
-                    </tr>
                     <% @posts.each do |post| %>
                       <tr>
                         <td>0</td>
-                        <td><%= post.name %></td>
-                        <td><%= post.description %></td>
+                        <td><%= post.title %></td>
+                        <td><%= post.post %></td>
                         <td>
-                          <%= link_to post, {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
-                            <i class="fa fa-edit"></i>
+                          <%= link_to admin_post_path(post), {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                            <i class="fa fa-eye"></i>
                           <% end %>
 
                           <%= link_to edit_admin_post_path(post), {:title => 'Edit', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
                             <i class="fa fa-edit"></i>
                           <% end %>
 
-                          <%= link_to post, {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
+                          <%= link_to admin_post_path(post), {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
                             <i class="fa fa-times"></i>
                           <% end %>
                         </td>
@@ -87,29 +76,12 @@
                     <th>Action</th>
                   </tr></thead>
                   <tbody>
-                    <tr>
-                      <td>0</td>
-                      <td>A Description</td>
-                      <td>
-                        <%= link_to new_admin_post_path, {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
-                          <i class="fa fa-edit"></i>
-                        <% end %>
-
-                        <%= link_to new_admin_post_path, {:title => 'Edit', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
-                          <i class="fa fa-edit"></i>
-                        <% end %>
-
-                        <%= link_to new_admin_post_path, {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
-                          <i class="fa fa-times"></i>
-                        <% end %>
-                      </td>
-                    </tr>
                     <% @posts.each do |post| %>
                       <tr>
                         <td>0</td>
-                        <td><%= post.name %></td>
+                        <td><%= post.title %></td>
                         <td>
-                          <%= link_to post, {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                          <%= link_to admin_post_path(post), {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
                             <i class="fa fa-edit"></i>
                           <% end %>
 
@@ -117,7 +89,7 @@
                             <i class="fa fa-edit"></i>
                           <% end %>
 
-                          <%= link_to post, {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
+                          <%= link_to admin_post_path(post), {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
                             <i class="fa fa-times"></i>
                           <% end %>
                         </td>

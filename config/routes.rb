@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'posts#index'
-    resources :posts, except: [:show]
-    resources :games, except: [:show]
+    resources :posts
+    resources :games
     resources :categories, except: [:show]
     resources :uploads, only: [:index, :show, :update, :create]
     resources :settings, only: [:index, :edit, :update]
