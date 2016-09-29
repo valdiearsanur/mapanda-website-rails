@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    resources :games, :comments
-    get 'site/index'
-    get 'site/login'
-    root 'site#login'
+    root 'posts#index'
+    resources :posts, except: [:show]
+    resources :games, except: [:show]
+    resources :categories, except: [:show]
+    resources :uploads, only: [:index, :show, :update, :create]
+    resources :settings, only: [:index, :edit, :update]
   end
 
 

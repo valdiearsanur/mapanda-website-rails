@@ -1,0 +1,132 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class="row">
+
+    <div class="col-md-12">
+      <div class="card card-plain">
+        <%= link_to 'New Post', new_admin_post_path, {:class => 'btn btn-default'} %>
+      </div>
+
+      <div class="card">
+          <div class="header">
+              <h4 class="title">Listing Posts</h4>
+              <p class="category">All your posts</p>
+          </div>
+          <div class="content table-responsive table-full-width">
+              <table class="table table-hover table-striped">
+                  <thead>
+                    <tr><th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td>0</td>
+                      <td>Sample Post</td>
+                      <td>A Description</td>
+                      <td>
+                        <%= link_to new_admin_post_path, {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                          <i class="fa fa-edit"></i>
+                        <% end %>
+
+                        <%= link_to new_admin_post_path, {:title => 'Edit', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                          <i class="fa fa-edit"></i>
+                        <% end %>
+
+                        <%= link_to new_admin_post_path, {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
+                          <i class="fa fa-times"></i>
+                        <% end %>
+                      </td>
+                    </tr>
+                    <% @posts.each do |post| %>
+                      <tr>
+                        <td>0</td>
+                        <td><%= post.name %></td>
+                        <td><%= post.description %></td>
+                        <td>
+                          <%= link_to post, {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                            <i class="fa fa-edit"></i>
+                          <% end %>
+
+                          <%= link_to edit_admin_post_path(post), {:title => 'Edit', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                            <i class="fa fa-edit"></i>
+                          <% end %>
+
+                          <%= link_to post, {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
+                            <i class="fa fa-times"></i>
+                          <% end %>
+                        </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+              </table>
+
+          </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-12">
+      <div class="card card-plain">
+        <%= link_to 'New Tags', new_admin_post_path, {:class => 'btn btn-default'} %>
+      </div>
+
+      <div class="card">
+          <div class="header">
+              <h4 class="title">Listing Tags</h4>
+              <p class="category">All your post tags</p>
+          </div>
+          <div class="content table-responsive table-full-width">
+              <table class="table table-hover table-striped">
+                  <thead>
+                    <tr><th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                  </tr></thead>
+                  <tbody>
+                    <tr>
+                      <td>0</td>
+                      <td>A Description</td>
+                      <td>
+                        <%= link_to new_admin_post_path, {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                          <i class="fa fa-edit"></i>
+                        <% end %>
+
+                        <%= link_to new_admin_post_path, {:title => 'Edit', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                          <i class="fa fa-edit"></i>
+                        <% end %>
+
+                        <%= link_to new_admin_post_path, {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
+                          <i class="fa fa-times"></i>
+                        <% end %>
+                      </td>
+                    </tr>
+                    <% @posts.each do |post| %>
+                      <tr>
+                        <td>0</td>
+                        <td><%= post.name %></td>
+                        <td>
+                          <%= link_to post, {:title => 'View', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                            <i class="fa fa-edit"></i>
+                          <% end %>
+
+                          <%= link_to edit_admin_post_path(post), {:title => 'Edit', :rel => 'tooltip', :class => 'btn btn-info btn-simple btn-sm'} do %> 
+                            <i class="fa fa-edit"></i>
+                          <% end %>
+
+                          <%= link_to post, {:title => 'Remove', :rel => 'tooltip', method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-simple btn-sm'} do %> 
+                            <i class="fa fa-times"></i>
+                          <% end %>
+                        </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+              </table>
+
+          </div>
+      </div>
+    </div>
+</div>

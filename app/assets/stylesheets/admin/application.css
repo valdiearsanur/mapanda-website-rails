@@ -11,13 +11,9 @@
  * file per style scope.
  *
  *= require bootstrap/dist/css/bootstrap
- * require supersized/slideshow/css/supersized
- *= require fancybox/source/jquery.fancybox
  *= require font-awesome/css/font-awesome.min
 
 
  *= require_tree .
  *= require_self
- 
- *= require admin/site/games
  */
