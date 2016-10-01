@@ -6,6 +6,9 @@ gem 'bower'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 
+# for heroku pg
+gem 'activerecord-jdbcpostgresql-adapter'
+
 gem "wysiwyg-rails"
 
 # Use postgresql for development and test server (not sqlite3)

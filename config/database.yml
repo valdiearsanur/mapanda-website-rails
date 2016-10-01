@@ -21,4 +21,4 @@ production:
    encoding: unicode
    database: mapanda_production
    username: valdiearsanur
-   password: valdiearsanur
+   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>

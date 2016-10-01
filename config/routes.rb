@@ -1,7 +1,22 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+  get 'users/new'
+  end
+
+  namespace :admin do
     root 'posts#index'
+
+    # login purposes
+    resources :user, :only => [:new, :create, :destroy]
+    resources :sessions, :only => [:new, :create, :destroy]
+    match '/signup', :to => 'users#new', via: :get
+    match '/signin', :to => 'sessions#new', via: :get
+    match '/signout', :to => 'sessions#destroy', via: :delete
+
+    get 'base/login'
+    post 'base/loginattemp'
+    post 'base/forgotpassword'
     resources :posts
     resources :games
     resources :categories, except: [:show]
